@@ -5,6 +5,8 @@ import DailyList from '../../../components/acheivements/daily/daily-list/daily-l
 import categories from '../../../daily-categories.json';
 import DailyTabs from '../../../components/nav/daily-tabs';
 
+
+// !!! DEPRECATED - USING MODULAR DAILY INSTEAD !!!
 export default function Daily(){
     const [sortedDailies, setSortedDailies] = useState({});
     const [selectedDaily, setSelectedDaily] = useState('Daily');
@@ -81,7 +83,6 @@ export default function Daily(){
 
     return (
         <Container>
-            <h1>{selectedDaily}</h1>
             <DailyTabs dailySorted={sortedDailies} selected={selectedDaily} setSelected={setSelectedDaily}/>
             <DailyList dailyList={sortedDailies[selectedDaily]}/>
         </Container>

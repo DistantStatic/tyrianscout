@@ -1,3 +1,33 @@
 .scroller{
     height: 96vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+@media screen and (max-width: 1400px) {
+    .scroller{
+        padding-right: 1em;
+    }
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: .75em;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  border-radius: 1em;
+  background: #f1f1f1; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  border-radius: 1em;
+  background: #23372b; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
 }

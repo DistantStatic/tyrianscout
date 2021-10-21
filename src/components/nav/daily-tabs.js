@@ -1,9 +1,10 @@
 import { Nav } from "react-bootstrap";
+import styles from './daily-tabs.module.css';
 
 export default function DailyTabs({selected, dailySorted, setSelected}) {
 
     return (
-        <Nav variant="tabs" defaultActiveKey={selected}>
+        <Nav className={styles.tabNav} variant="tabs" defaultActiveKey={selected}>
             {
                 Object.entries(dailySorted).map(([category, _]) => (
                     <Nav.Item>
