@@ -1,0 +1,113 @@
+[{
+    "id": 79,
+    "name": "Halloween Daily",
+    "description": "",
+    "order": 1,
+    "icon": "https://render.guildwars2.com/file/7148FBEFC0071191C91BFD37D1346BF70DA65403/602778.png",
+    "achievements": [3167, 4437, 1021, 1023, 1024, 1025]
+}, {
+    "id": 88,
+    "name": "Daily Fractals",
+    "description": "",
+    "order": 2,
+    "icon": "https://render.guildwars2.com/file/4A5834E40CDC6A0C44085B1F697565002D71CD47/1228226.png",
+    "achievements": [2422, 2533, 3185, 2916, 2949, 2918, 2952, 2981, 2991, 2895, 2967, 2900, 2898, 2964, 2956]
+}, {
+    "id": 97,
+    "name": "Daily",
+    "description": "",
+    "order": 0,
+    "icon": "https://render.guildwars2.com/file/483E3939D1A7010BDEA2970FB27703CAAD5FBB0F/42684.png",
+    "achievements": [1974, 1973, 3626, 1932, 1931, 1943, 1963, 1924, 1929, 1861, 2817, 3449, 3450, 1849, 946, 1844, 1845, 1840]
+}, {
+    "id": 98,
+    "name": "Wintersday Daily",
+    "description": "",
+    "order": 0,
+    "icon": "https://render.guildwars2.com/file/C5CE0723E54B4B2F78A2E6E5496A04B54E7A65E6/602777.png",
+    "achievements": [5073, 5071, 5068, 5075, 5067, 5070, 1265, 2789, 1261, 1262, 3271, 3263]
+}, {
+    "id": 162,
+    "name": "Daily Super Adventure Festival",
+    "description": "",
+    "order": 1,
+    "icon": "https://render.guildwars2.com/file/B3DA5159BA6318466403EA14A47F0760633C48C5/630734.png",
+    "achievements": [2888, 2854, 2852, 2841, 2848, 2863, 5680]
+}, {
+    "id": 201,
+    "name": "Daily Lunar New Year",
+    "description": "",
+    "order": 1,
+    "icon": "https://render.guildwars2.com/file/BA6EB24DE85A3EB763E7BB5FBE0836022222A340/947482.png",
+    "achievements": [2080, 2082, 2081, 2079, 4077, 5081, 5076]
+}, {
+    "id": 207,
+    "name": "Daily Sunken Treasure Hunter",
+    "description": "",
+    "order": 22,
+    "icon": "https://render.guildwars2.com/file/9380EEBE040AF400A2EFCC08175F4D9B6CB2F70A/1983619.png",
+    "achievements": [4181]
+}, {
+    "id": 213,
+    "name": "Daily Festival of the Four Winds",
+    "description": "",
+    "order": 1,
+    "icon": "https://render.guildwars2.com/file/9BED5B1BC4DC043E72CA9A6F07704D4EF875655E/2015706.png",
+    "achievements": [5432, 4319, 4333, 4317, 4314, 4284]
+}, {
+    "id": 221,
+    "name": "Daily Roller Beetle Racing",
+    "description": "",
+    "order": 1,
+    "icon": "https://render.guildwars2.com/file/A0271015180B52A3EC7A2F96A55F18DA7F95AD0E/2069928.png",
+    "achievements": [4482, 4484, 4480, 4475]
+}, {
+    "id": 234,
+    "name": "Daily Grothmar Valley",
+    "description": "",
+    "order": 19,
+    "icon": "https://render.guildwars2.com/file/4A5AD2C0079107784C04EEEF04CB7911105AB240/2199969.png",
+    "achievements": [4953, 4977, 4906, 4913, 4924, 4937]
+}, {
+    "id": 238,
+    "name": "Daily Living World Season 3",
+    "description": "",
+    "order": 21,
+    "icon": "https://render.guildwars2.com/file/09DE0653ABAE58F8A048BB7F73D62AD9FCB70F41/1677315.png",
+    "achievements": [3052, 3083, 3068, 3055]
+}, {
+    "id": 239,
+    "name": "Daily Bjora Marches",
+    "description": "",
+    "order": 18,
+    "icon": "https://render.guildwars2.com/file/0AAD072E707AE02AE1B9984FD8BCE1A113E759B7/2221432.png",
+    "achievements": [5047, 5007, 5049, 5013, 5045]
+}, {
+    "id": 243,
+    "name": "Daily Living World Season 4",
+    "description": "",
+    "order": 20,
+    "icon": "https://render.guildwars2.com/file/056C32B97B15F04E2BD6A660FC451946ED086040/1895981.png",
+    "achievements": [3974, 3963, 3987, 4005]
+}, {
+    "id": 250,
+    "name": "Daily Strike Mission",
+    "description": "",
+    "order": 2,
+    "icon": "https://render.guildwars2.com/file/C34A20B86C73B0DCDC9401ECD22CE37C36B018A7/2271016.png",
+    "achievements": [5328]
+}, {
+    "id": 252,
+    "name": "Daily Drizzlewood Coast",
+    "description": "",
+    "order": 17,
+    "icon": "https://render.guildwars2.com/file/2D305E1F34A7985BF572D40717062096E3BD58BA/2293615.png",
+    "achievements": [5296, 5270, 5295, 5355]
+}, {
+    "id": 264,
+    "name": "Daily Champions",
+    "description": "",
+    "order": 16,
+    "icon": "https://render.guildwars2.com/file/245AA24CF4D3D529AAAB123CE5B9EBB0DF534F49/2352419.png",
+    "achievements": [5482, 5497, 5588, 5646, 5499]
+}]
