@@ -7,11 +7,20 @@ import { Container, Nav} from 'react-bootstrap';
 import Dailies from '../../../daily-json';
 import DailyList from '../../../components/acheivements/daily/daily-list/daily-list';
 import LoadingModal from '../../../modals/loading/loading';
+import DailyModal from '../../../modals/daily/daily';
 
 export default function ModularDaily(props) {
     const [current, setCurrent] = useState(0);
     const [dailyCollection, setDailyCollection] = useState(Dailies);
     const [loading, setLoading] = useState(false);
+    const [detailModal, setDetailModal] = useState(false);
+    const [daily, setDaily] = useState({
+        name: "",
+        description: "",
+        rewards: [],
+        tiers: [],
+        id: "",
+    });
 
     useEffect(() => {
         selectDaily(current)
@@ -58,9 +67,16 @@ export default function ModularDaily(props) {
         setCurrent(index)
     }
 
+    function showDetailModal(daily) {
+        console.log('call');
+        setDaily(daily);
+        setDetailModal(true);
+    }
+
     return(
         <>
-        <LoadingModal show={loading} onHide={() => setLoading(false)} />
+        <DailyModal show={detailModal} hide={() => setDetailModal(false)} daily={daily}/>
+        <LoadingModal show={loading} hide={() => setLoading(false)} />
         <Nav className={styles.tabNav} variant="tabs" defaultActiveKey={current}>
         {
             dailyCollection.map((daily, index) => (
@@ -77,7 +93,7 @@ export default function ModularDaily(props) {
         }
         </Nav>
         <Container>
-            <DailyList dailyList={dailyCollection[current]['achievements']} />
+            <DailyList dailyList={dailyCollection[current]['achievements']} showDetail={showDetailModal}/>
         </Container>
         </>
     )
