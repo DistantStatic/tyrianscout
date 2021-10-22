@@ -31,7 +31,7 @@ export default function ModularDaily(props) {
                 let ids = response.data['achievements'];
                 /**
                 * Don't even need this, it just straight up took the array raw
-                * leaving it here just in case
+                * leaving it here just in case tho
                 let str = "";
                 if (typeof(ids) === Array){
                     ids.forEach((id, idx) => {
