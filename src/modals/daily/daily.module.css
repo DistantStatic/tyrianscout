@@ -1,0 +1,8 @@
+.tierRow {
+    text-align: center;
+}
+
+.rewardBox {
+    display: flex;
+    justify-content: center;
+}
