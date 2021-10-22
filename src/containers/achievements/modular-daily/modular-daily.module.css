@@ -1,3 +1,11 @@
 .tabNav {
-    background-color:gainsboro;
+    background-color: rgb(10 7 14 / 86%);
+    padding-left: 3em;
+    padding-right: 3em;
+    justify-content: center;
+    border-bottom-color: #99c2ff;
+}
+
+.dailyNavLink {
+    color: #99c2ff;
 }

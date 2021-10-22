@@ -1,0 +1,16 @@
+.loadingModal {
+    margin-top: 5em;
+    text-align: center;
+    height:50%;
+}
+
+.loadingModalContent{
+    background-color: rgba(0,0,0,0)!important;
+    border:none!important;
+}
+
+.loadingSpinner {
+    height: 13em;
+    width: 6em;
+    color:chartreuse;
+}

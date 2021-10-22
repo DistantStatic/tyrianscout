@@ -2,8 +2,7 @@ import { Row } from "react-bootstrap";
 import Daily from '../daily/daily';
 import styles from './daily-list.module.css';
 
-export default function DailyList({ dailyList, dailySorted }) {
-    console.log(dailyList);
+export default function DailyList({ dailyList }) {
 
     return(
         <div className={styles.scroller}>
@@ -24,7 +23,7 @@ export default function DailyList({ dailyList, dailySorted }) {
              */
         }
         {
-        <Row xs="1" md="3" xl="5" className={styles.scroller}>
+        <Row xs="1" md="3" xl="5" className={styles.listRow}>
             {dailyList ? dailyList.map((daily) => (
                 <Daily key={daily.id} daily={daily} />
             )): ""}

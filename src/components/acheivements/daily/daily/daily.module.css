@@ -4,5 +4,9 @@
 }
 
 .dailyTitle {
-    display: flex;
+    display: contents;
+}
+
+.dailyCard {
+    background-color: rgb(255 255 255 / 90%);
 }
