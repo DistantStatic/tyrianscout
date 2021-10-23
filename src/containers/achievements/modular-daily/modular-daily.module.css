@@ -1,23 +1,14 @@
-.tabNav {
-    background-color: rgb(10 7 14 / 86%);
-    padding-left: 3em;
-    padding-right: 3em;
-    justify-content: center;
-    border-bottom-color: #99c2ff;
-    flex-wrap: wrap;
-}
-
 .main {
     margin-top: 7em;
 }
 
-@media screen and (max-width: 1527px){
+@media screen and (max-width: 1499px){
     .main{
         margin-top: 9em;
     }
 }
 
-@media screen and (max-width: 991px) and (min-height: 700px) {
+@media screen and (max-width: 1199px) and (min-height: 700px) {
     .main{
         margin-top: 6.5em;
     }
@@ -27,6 +18,16 @@
     .main{
         margin-top: 5.5em;
     }
+}
+
+.tabNav {
+    width: 100%;
+    padding-left: 3em;
+    padding-right: 3em;
+    justify-content: center;
+    border-bottom-color: #99c2ff;
+    flex-wrap: wrap;
+    margin-right: 11em;
 }
 
 .dailyNavLink {
@@ -43,4 +44,9 @@
 .toggleButton {
     padding: 0.5em;
     margin: 0.5em;
+    margin-left: auto;
+}
+
+.navBrand {
+    margin-left: 2em;
 }

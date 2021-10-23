@@ -15,15 +15,15 @@ export default function Daily(props) {
                         {props.daily.requirement}
                     </Card.Text>
                 </Card.Body>
-                        {
-                        props.daily.description ? 
-                        <Card.Footer>
-                            <i>
-                                "{props.daily.description}"
-                            </i>
-                        </Card.Footer> 
-                        : ""
-                        }
+                    {
+                    props.daily.description ? 
+                    <Card.Footer>
+                        <i>
+                            "{props.daily.description}"
+                        </i>
+                    </Card.Footer> 
+                    : ""
+                    }
             </Card>
         </Col>
     )

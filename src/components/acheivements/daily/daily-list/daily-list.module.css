@@ -18,13 +18,13 @@
     }
 }
 
-@media screen and (max-height: 560px) and (min-width: 1527px){
+@media screen and (max-height: 560px) and (min-width: 1500px){
     .scroller{
         height: 70vh;
     }
 }
 
-@media screen and (max-height: 650px) and (max-width: 1527px){
+@media screen and (max-height: 650px) and (max-width: 1499px){
     .scroller{
         height: 60vh;
     }
@@ -38,13 +38,13 @@
 
 @media screen and (max-height: 460px) {
     .scroller{
-        height: 65vh;
+        height: 60vh;
     }
 }
 
 @media screen and (max-height: 400px) {
     .scroller{
-        height: 55vh;
+        height: 50vh;
     }
 }
 

@@ -77,7 +77,8 @@ export default function ModularDaily(props) {
         <>
         <DailyModal show={detailModal} hide={() => setDetailModal(false)} daily={daily}/>
         <LoadingModal show={loading} hide={() => setLoading(false)} />
-        <Navbar variant="dark" bg="dark" expand="xl" className={styles.tabNavbar}>
+        <Navbar variant="dark" bg="dark" expand="xl" className={styles.tabNavbar} collapseOnSelect={true}>
+            <Navbar.Brand className={styles.navBrand}>Tyrian Scout</Navbar.Brand>
             <Navbar.Toggle className={styles.toggleButton} aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className={styles.tabNav} variant="tabs" defaultActiveKey={current}>
