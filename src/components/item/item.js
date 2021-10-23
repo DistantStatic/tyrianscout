@@ -2,7 +2,6 @@ import { Figure, Image } from "react-bootstrap";
 import styles from './item.module.css';
 
 export default function ItemDisplay({item}){
-    console.log(item);
     return (
         <Figure className={styles.item}>
             <h4> <u>Reward</u> </h4>

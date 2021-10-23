@@ -22,6 +22,7 @@ export default function ModularDaily(props) {
         id: "",
     });
 
+    //TODO: Refactor as customer state setter
     useEffect(() => {
         selectDaily(current)
     }, [])
@@ -68,7 +69,6 @@ export default function ModularDaily(props) {
     }
 
     function showDetailModal(daily) {
-        console.log('call');
         setDaily(daily);
         setDetailModal(true);
     }

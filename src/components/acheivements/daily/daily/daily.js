@@ -1,6 +1,5 @@
 import { Card, Col } from "react-bootstrap";
 import styles from './daily.module.css';
-import axios from '../../../../axios-instances/axios-gw2';
 
 export default function Daily(props) {
 

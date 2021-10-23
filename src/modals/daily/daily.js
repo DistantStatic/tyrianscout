@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 
 import { Modal, Button, ListGroup, Col, Row } from 'react-bootstrap';
+import CustSpinner from '../../components/custspinner/custspinner';
 import styles from './daily.module.css';
 
 import Item from '../../components/item/item';
@@ -8,17 +9,18 @@ import axios from '../../axios-instances/axios-gw2';
 
 export default function DailyModal(props){
     const [reward, setReward] = useState({});
+    const [loadingReward, setLoadingReward] = useState(true);
 
     useEffect(() => {
-        if (typeof(props.daily.rewards) === 'undefined') return setReward(null);
-        if (typeof(props.daily.rewards[0]) === 'undefined') return setReward(null);
-        //set loading to hide reward while loading
+        if (typeof(props.daily.rewards) === 'undefined' || typeof(props.daily.rewards[0]) === 'undefined') { setReward(null); setLoadingReward(false); return; }
+        setLoadingReward(true)
         axios({
             method: 'GET',
             url:`/items/${props.daily.rewards[0]['id']}`
         })
         .then(response => {
             setReward(response.data);
+            setLoadingReward(false);
         })
     }, [props])
 
@@ -46,12 +48,14 @@ export default function DailyModal(props){
                         ))
                     }
                 </ListGroup>
-                {
-                    //TODO: Make loading neater by hiding rewardbox while loading
-                }
                 <hr />
                 <div className={styles.rewardBox} >
-                    { reward ? <Item item={reward} /> : "" }
+                    {
+                    loadingReward ?
+                    <CustSpinner animation="border" role="status" className={styles.loadingSpinner}>
+                    <span className="visually-hidden">Loading...</span>
+                    </CustSpinner> : reward ? <Item item={reward} /> : ""
+                    }
                 </div>
             </Modal.Body>
         </Modal>
