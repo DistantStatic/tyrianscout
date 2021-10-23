@@ -4,8 +4,43 @@
     padding-right: 3em;
     justify-content: center;
     border-bottom-color: #99c2ff;
+    flex-wrap: wrap;
+}
+
+.main {
+    margin-top: 7em;
+}
+
+@media screen and (max-width: 1527px){
+    .main{
+        margin-top: 9em;
+    }
+}
+
+@media screen and (max-width: 991px) and (min-height: 700px) {
+    .main{
+        margin-top: 6.5em;
+    }
+}
+
+@media screen and (max-height: 700px) and (max-width: 1199px) {
+    .main{
+        margin-top: 5.5em;
+    }
 }
 
 .dailyNavLink {
-    color: #99c2ff;
+    color: #99c2ff!important;
+}
+
+.tabNavbar {
+    padding: 0em;
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+}
+
+.toggleButton {
+    padding: 0.5em;
+    margin: 0.5em;
 }

@@ -1,38 +1,85 @@
 .scroller{
-  margin-top: 1em;
-    height: 88vh;
+    height: 82vh;
+    margin-top: 1em;
     overflow: auto;
     overflow-x: hidden;
 }
 
-.listRow{
-  height: fit-content;
+@media screen and (max-height: 900px) {
+    .scroller{
+        height: 80vh;
+    }
 }
 
-@media screen and (max-width: 1400px) {
+
+@media screen and (max-height: 760px) and (min-width: 992px){
     .scroller{
-        padding-right: 1em;
+        height: 75vh;
     }
+}
+
+@media screen and (max-height: 560px) and (min-width: 1527px){
+    .scroller{
+        height: 70vh;
+    }
+}
+
+@media screen and (max-height: 650px) and (max-width: 1527px){
+    .scroller{
+        height: 60vh;
+    }
+}
+
+@media screen and (max-height: 650px) and (max-width: 1199px){
+    .scroller{
+        height: 75vh;
+    }
+}
+
+@media screen and (max-height: 460px) {
+    .scroller{
+        height: 65vh;
+    }
+}
+
+@media screen and (max-height: 400px) {
+    .scroller{
+        height: 55vh;
+    }
+}
+
+@media screen and (max-height: 300px) {
+    .scroller{
+        height: 40vh;
+    }
+}
+
+.listRow{
+    height: fit-content;
+}
+
+.scroller{
+    padding-right: 1em;
 }
 
 /* width */
 ::-webkit-scrollbar {
-  width: .75em;
+    width: .75em;
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
-  border-radius: 1em;
-  background: #f1f1f1; 
+    border-radius: 1em;
+    background: #f1f1f1; 
 }
  
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  border-radius: 1em;
-  background: #23372b; 
+    border-radius: 1em;
+    background: #23372b; 
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #555; 
+    background: #555; 
 }

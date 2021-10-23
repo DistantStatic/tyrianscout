@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import styles from './modular-daily.module.css';
 
 import axios from '../../../axios-instances/axios-gw2';
-import { Container, Nav} from 'react-bootstrap';
+import { Container, Nav, Navbar} from 'react-bootstrap';
 
 import Dailies from '../../../daily-json';
 import DailyList from '../../../components/acheivements/daily/daily-list/daily-list';
@@ -77,22 +77,27 @@ export default function ModularDaily(props) {
         <>
         <DailyModal show={detailModal} hide={() => setDetailModal(false)} daily={daily}/>
         <LoadingModal show={loading} hide={() => setLoading(false)} />
-        <Nav className={styles.tabNav} variant="tabs" defaultActiveKey={current}>
-        {
-            dailyCollection.map((daily, index) => (
-                <Nav.Item>
-                    <Nav.Link
-                        className={styles.dailyNavLink}
-                        eventKey={index}
-                        onClick={() => {selectDaily(index)}}
-                        >
-                        {daily['name']}
-                    </Nav.Link>
-                </Nav.Item>
-            ))
-        }
-        </Nav>
-        <Container>
+        <Navbar variant="dark" bg="dark" expand="xl" className={styles.tabNavbar}>
+            <Navbar.Toggle className={styles.toggleButton} aria-controls="basic-navbar-nav" />
+            <Navbar.Collapse id="basic-navbar-nav">
+                <Nav className={styles.tabNav} variant="tabs" defaultActiveKey={current}>
+                    {
+                        dailyCollection.map((daily, index) => (
+                            <Nav.Item>
+                                <Nav.Link
+                                    className={styles.dailyNavLink}
+                                    eventKey={index}
+                                    onClick={() => {selectDaily(index)}}
+                                    >
+                                    {daily['name']}
+                                </Nav.Link>
+                            </Nav.Item>
+                        ))
+                    }
+                </Nav>
+            </Navbar.Collapse>
+        </Navbar>
+        <Container className={styles.main}>
             <DailyList dailyList={dailyCollection[current]['achievements']} showDetail={showDetailModal}/>
         </Container>
         </>

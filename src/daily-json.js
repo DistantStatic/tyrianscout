@@ -8,7 +8,7 @@ const Dailies = [{
     "icon": "https://render.guildwars2.com/file/4A5834E40CDC6A0C44085B1F697565002D71CD47/1228226.png"
 }, {
     "id": 97,
-    "name": "Daily",
+    "name": "Daily PvE/PvP",
     "icon": "https://render.guildwars2.com/file/483E3939D1A7010BDEA2970FB27703CAAD5FBB0F/42684.png"
 }, {
     "id": 98,
