@@ -25,8 +25,41 @@
     padding-left: 3em;
     padding-right: 3em;
     justify-content: center;
-    border-bottom-color: #99c2ff;
     flex-wrap: wrap;
+    border-bottom-color: #99c2ff;
+}
+
+@media screen and (max-width: 1199px){
+    .tabNav {
+        padding-top: 5em;
+        flex-wrap: unset;
+        overflow-y: scroll;
+        max-height: 50vh;
+    }
+}
+
+@media screen and (max-height: 860px) {
+    .tabNav{
+        padding-top: 8em;
+    }
+}
+
+@media screen and (max-height: 740px) {
+    .tabNav{
+        padding-top: 12em;
+    }
+}
+
+@media screen and (max-height: 675px) {
+    .tabNav{
+        padding-top: 14em;
+    }
+}
+
+@media screen and (max-height: 550px) {
+    .tabNav{
+        padding-top: 16em;
+    }
 }
 
 .dailyNavLink {

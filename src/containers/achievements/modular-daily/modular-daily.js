@@ -68,9 +68,8 @@ export default function ModularDaily(props) {
         <AboutModal show={aboutModal} hide={() => setAboutModal(false)} />
         <Navbar variant="dark" bg="dark" expand="xl" className={styles.tabNavbar} collapseOnSelect={true}>
             <Navbar.Brand href='/' className={styles.navBrand}>Tyrian Scout</Navbar.Brand>
-            <Navbar.Toggle className={styles.toggleButton} aria-controls="basic-navbar-nav" />
-            <Navbar.Collapse id="basic-navbar-nav">
-                <Nav className={styles.tabNav} variant="tabs" defaultActiveKey={current}>
+            <Navbar.Collapse id="scout-navbar">
+                <Nav className={styles.tabNav} variant="tabs" defaultActiveKey={current} navbarScroll={false}>
                     {
                         dailyCollection.map((daily, index) => (
                             <Nav.Item>
@@ -86,13 +85,8 @@ export default function ModularDaily(props) {
                     }
                 </Nav>
             </Navbar.Collapse>
-            {
-                //TODO: Add about page with contact information and general info
-                // Should be a Navbar.brand with a modal action that displays the about information
-                // WILL CAUSE NEED TO REDO MEDIA QUERIES DEPENDING ON SIZE
-            }
-            
             <Navbar.Brand onClick={() => setAboutModal(true)} className={styles.navAbout}>About</Navbar.Brand>
+            <Navbar.Toggle className={styles.toggleButton} aria-controls="scout-navbar" />
         </Navbar>
         <Container className={styles.main}>
             <DailyList dailyList={dailyCollection[current]['achievements']} showDetail={showDetailModal}/>
