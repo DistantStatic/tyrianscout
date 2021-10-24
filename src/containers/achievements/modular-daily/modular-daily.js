@@ -8,12 +8,14 @@ import Dailies from '../../../daily-json';
 import DailyList from '../../../components/acheivements/daily/daily-list/daily-list';
 import LoadingModal from '../../../modals/loading/loading';
 import DailyModal from '../../../modals/daily/daily';
+import AboutModal from '../../../modals/about/about';
 
 export default function ModularDaily(props) {
     const [current, setCurrent] = useState(0);
     const [dailyCollection, setDailyCollection] = useState(Dailies);
     const [loading, setLoading] = useState(false);
     const [detailModal, setDetailModal] = useState(false);
+    const [aboutModal, setAboutModal] = useState(false);
     const [daily, setDaily] = useState({
         name: "",
         description: "",
@@ -22,9 +24,10 @@ export default function ModularDaily(props) {
         id: "",
     });
 
-    //TODO: Refactor as customer state setter
+    //TODO: Theres probably a better way to do this
     useEffect(() => {
         selectDaily(current)
+        // eslint-disable-next-line
     }, [])
 
     function selectDaily(index) {
@@ -39,21 +42,6 @@ export default function ModularDaily(props) {
         })
             .then((response) => {
                 let ids = response.data['achievements'];
-                /**
-                * Don't even need this, it just straight up took the array raw
-                * leaving it here just in case tho
-                let str = "";
-                if (typeof(ids) === Array){
-                    ids.forEach((id, idx) => {
-                        str+=id;
-                        if (idx !== ids.length()){
-                            str+=",";
-                        }
-                    })
-                } else {
-                    str += ids;
-                }
-                */
                 axios({
                     method: 'GET',
                     url: `/achievements?ids=${ids}`
@@ -77,8 +65,9 @@ export default function ModularDaily(props) {
         <>
         <DailyModal show={detailModal} hide={() => setDetailModal(false)} daily={daily}/>
         <LoadingModal show={loading} hide={() => setLoading(false)} />
+        <AboutModal show={aboutModal} hide={() => setAboutModal(false)} />
         <Navbar variant="dark" bg="dark" expand="xl" className={styles.tabNavbar} collapseOnSelect={true}>
-            <Navbar.Brand className={styles.navBrand}>Tyrian Scout</Navbar.Brand>
+            <Navbar.Brand href='/' className={styles.navBrand}>Tyrian Scout</Navbar.Brand>
             <Navbar.Toggle className={styles.toggleButton} aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className={styles.tabNav} variant="tabs" defaultActiveKey={current}>
@@ -97,6 +86,13 @@ export default function ModularDaily(props) {
                     }
                 </Nav>
             </Navbar.Collapse>
+            {
+                //TODO: Add about page with contact information and general info
+                // Should be a Navbar.brand with a modal action that displays the about information
+                // WILL CAUSE NEED TO REDO MEDIA QUERIES DEPENDING ON SIZE
+            }
+            
+            <Navbar.Brand onClick={() => setAboutModal(true)} className={styles.navAbout}>About</Navbar.Brand>
         </Navbar>
         <Container className={styles.main}>
             <DailyList dailyList={dailyCollection[current]['achievements']} showDetail={showDetailModal}/>

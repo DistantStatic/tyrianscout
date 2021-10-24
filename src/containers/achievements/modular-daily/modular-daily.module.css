@@ -2,7 +2,7 @@
     margin-top: 7em;
 }
 
-@media screen and (max-width: 1499px){
+@media screen and (max-width: 1467px){
     .main{
         margin-top: 9em;
     }
@@ -27,7 +27,6 @@
     justify-content: center;
     border-bottom-color: #99c2ff;
     flex-wrap: wrap;
-    margin-right: 11em;
 }
 
 .dailyNavLink {
@@ -48,5 +47,13 @@
 }
 
 .navBrand {
+    cursor: pointer;
     margin-left: 2em;
+}
+
+.navAbout {
+    cursor: pointer;
+    padding-right: 0;
+    margin-left: 2em;
+    margin-right: 2.5em;
 }

@@ -1,0 +1,13 @@
+.centralize {
+    justify-content: center;
+    text-align: center;
+}
+.closeButton {
+    position:absolute;
+    margin-right: 1em;
+    right: 0;
+}
+
+.textCenter {
+    text-align: center;
+}
