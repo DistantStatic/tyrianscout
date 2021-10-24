@@ -1,14 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from '../../tyrianscout/src/App';
+import App from './App';
 import reportWebVitals from './reportWebVitals';
-import background from './backgrounds/1.jpg'
 
 ReactDOM.render(
 
   <React.StrictMode>
-    <App styles={{ backgroundImage:`url(${background})` }}/>
+    <App/>
   </React.StrictMode>,
   document.getElementById('root')
 );
