@@ -38,25 +38,25 @@
     }
 }
 
-@media screen and (max-height: 860px) {
+@media screen and (max-height: 860px) and (max-width: 1199px) {
     .tabNav{
         padding-top: 8em;
     }
 }
 
-@media screen and (max-height: 740px) {
+@media screen and (max-height: 740px) and (max-width: 1199px) {
     .tabNav{
         padding-top: 12em;
     }
 }
 
-@media screen and (max-height: 675px) {
+@media screen and (max-height: 675px) and (max-width: 1199px) {
     .tabNav{
         padding-top: 14em;
     }
 }
 
-@media screen and (max-height: 550px) {
+@media screen and (max-height: 550px) and (max-width: 1199px) {
     .tabNav{
         padding-top: 16em;
     }
