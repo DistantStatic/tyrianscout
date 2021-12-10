@@ -84,8 +84,10 @@ export default function ModularDaily(props) {
                         ))
                     }
                 </Nav>
+                <Nav className="justify-content-left">
+                    <Navbar.Brand onClick={() => setAboutModal(true)} className={styles.navAbout}>About</Navbar.Brand>
+                </Nav>
             </Navbar.Collapse>
-            <Navbar.Brand onClick={() => setAboutModal(true)} className={styles.navAbout}>About</Navbar.Brand>
             <Navbar.Toggle className={styles.toggleButton} aria-controls="scout-navbar" />
         </Navbar>
         <Container className={styles.main}>
