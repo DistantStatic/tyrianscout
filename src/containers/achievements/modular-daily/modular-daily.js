@@ -72,7 +72,7 @@ export default function ModularDaily(props) {
                 <Nav className={styles.tabNav} variant="tabs" defaultActiveKey={current} navbarScroll={false}>
                     {
                         dailyCollection.map((daily, index) => (
-                            <Nav.Item>
+                            <Nav.Item key={index}>
                                 <Nav.Link
                                     className={styles.dailyNavLink}
                                     eventKey={index}
