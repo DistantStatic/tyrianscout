@@ -25,7 +25,10 @@ export default function DailyModal(props){
     }, [props])
 
     return(
-        <Modal show={props.show} onHide={props.hide}>
+        <Modal show={props.show} onHide={props.hide} contentClassName={styles.modalBg}>
+            {
+                //TODO: Darken to match theme
+            }
             <Modal.Header>
                 <Modal.Title>{props.daily.name}</Modal.Title>
                 <Button variant="danger" onClick={props.hide}>X</Button>
@@ -37,10 +40,10 @@ export default function DailyModal(props){
                 {
                     props.daily.description ? <p><i>{props.daily.description}</i></p> : ""
                 }
-                <ListGroup>
+                <ListGroup className={styles.modalBg}>
                     {
                         props.daily.tiers.map((tier, index) => (
-                            <ListGroup.Item>
+                            <ListGroup.Item className={styles.modalBg}>
                                 <Row className={styles.tierRow}>
                                     <Col xs={4}>Count: {tier.count}</Col> <Col xs={4}>{`Tier: ${index + 1}`} </Col> <Col xs={4}>Points: {tier.points}</Col>
                                 </Row>

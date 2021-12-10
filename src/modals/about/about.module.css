@@ -11,3 +11,8 @@
 .textCenter {
     text-align: center;
 }
+
+.modalBg {
+    background-color: rgb(33 37 41 / 90%);
+    color:ghostwhite;
+}

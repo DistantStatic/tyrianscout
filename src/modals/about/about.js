@@ -3,7 +3,10 @@ import styles from './about.module.css';
 
 export default function AboutModal(props) {
     return (
-        <Modal show={props.show} onHide={props.hide}>
+        <Modal show={props.show} onHide={props.hide} contentClassName={styles.modalBg}>
+        {
+            //TODO: Darken to match theme
+        }
             <Modal.Header>
                 <Modal.Title>About</Modal.Title>
                 <Button onClick={props.hide} variant="danger">X</Button>
