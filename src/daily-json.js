@@ -2,7 +2,7 @@ const rawDailies = [{
     "id": 79,
     "name": "Halloween Daily",
     "icon": "https://render.guildwars2.com/file/7148FBEFC0071191C91BFD37D1346BF70DA65403/602778.png",
-    "active": true
+    "active": false
 }, {
     "id": 97,
     "name": "Daily PvE/PvP",
