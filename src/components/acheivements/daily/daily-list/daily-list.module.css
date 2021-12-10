@@ -1,65 +1,7 @@
-.scroller{
-    height: 82vh;
-    margin-top: 1em;
-    overflow: auto;
-    overflow-x: hidden;
-}
 
-@media screen and (max-height: 900px) {
-    .scroller{
-        height: 80vh;
-    }
-}
-
-
-@media screen and (max-height: 760px) and (min-width: 992px){
-    .scroller{
-        height: 75vh;
-    }
-}
-
-@media screen and (max-height: 560px) and (min-width: 1500px){
-    .scroller{
-        height: 70vh;
-    }
-}
-
-@media screen and (max-height: 650px) and (max-width: 1467px){
-    .scroller{
-        height: 60vh;
-    }
-}
-
-@media screen and (max-height: 650px) and (max-width: 1199px){
-    .scroller{
-        height: 75vh;
-    }
-}
-
-@media screen and (max-height: 460px) {
-    .scroller{
-        height: 60vh;
-    }
-}
-
-@media screen and (max-height: 400px) {
-    .scroller{
-        height: 50vh;
-    }
-}
-
-@media screen and (max-height: 300px) {
-    .scroller{
-        height: 40vh;
-    }
-}
 
 .listRow{
     height: fit-content;
-}
-
-.scroller{
-    padding-right: 1em;
 }
 
 /* width */
@@ -69,8 +11,28 @@
 
 /* Track */
 ::-webkit-scrollbar-track {
+    margin-top: 5em;
+    margin-bottom: 1em;
     border-radius: 1em;
     background: #f1f1f1; 
+}
+
+@media screen and (min-width: 700px){
+    ::-webkit-scrollbar-track {
+    margin-top: 5em;
+    }
+}
+
+@media screen and (min-width: 1200px){
+    ::-webkit-scrollbar-track {
+    margin-top: 8em;
+    }
+}
+
+@media screen and (min-width: 1435px){
+    ::-webkit-scrollbar-track {
+    margin-top: 6em;
+    }
 }
  
 /* Handle */
