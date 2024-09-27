@@ -2,13 +2,15 @@
 'use client'
 
 import useSWR from 'swr';
+import { useContext, useEffect } from 'react';
+import {Context_ApiKey, Context_Account} from '/app/layout.tsx';
 
 const fetcher = (url) => fetch(url).then(res => res.json());
 
-const API_KEY = "93CDBF1A-F815-A049-9F71-94B78C4DFAFEA26118B9-D719-4CB9-A315-D83B1269FD7E";
 const base = "https://api.guildwars2.com/v2/account/";
 
 function DailyComplete({current, complete}) {
+	console.log("printing cookie: " + document.cookie);
 	return (
 		<>
 			{
@@ -48,7 +50,19 @@ function DailyCollection({dailies}) {
 			
 
 export default function Page() {
-	const url = base + "wizardsvault/daily"+"?access_token="+API_KEY;
+	/*const [API_KEY, setAPI_KEY] = useState("");*/
+	let { apiKey, setApiKey } = useContext(Context_ApiKey);
+	let { account, setAccount } = useContext(Context_Account);
+	useEffect( () => {
+
+	console.log(document.cookie);
+	let cookieApi = document.cookie.match(/(?<=apikey\=)\S*(?=;)/);
+	console.log(cookieApi);
+	setApiKey(cookieApi);
+	}, [/*document.cookie*/]);
+	
+
+	const url = base + "wizardsvault/daily"+"?access_token="+(apiKey ? apiKey : document.cookie);
 	const { data, error, isLoading } = useSWR(url, fetcher);
 
 	if (error) return <div>failed to load</div>
@@ -58,7 +72,7 @@ export default function Page() {
 	return (
 		<div>
 			<h1>Welcome to the wizard vault!!!</h1>
-			<DailyCollection dailies={data} />
+			{ data.objectives ? <DailyCollection dailies={data} /> : <></>}
 		</div>
 	)
 }
