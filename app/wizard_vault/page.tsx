@@ -21,13 +21,28 @@ function DailyComplete({current, complete}) {
 function Daily({daily}) {
 
 	return (
-		<div>
-			<h3>{daily.track} | {daily.title}</h3>
+		<div class="border-solid border-grey-50 border rounded mx-auto px-2 py-5 w-full max-w-xs break-normal">
+			<h3><u>{daily.track}</u></h3>
+			<h3>{daily.title}</h3>
 			<span>Astral Reward: {daily.acclaim}</span>
 			<p>Progress:
 				<DailyComplete current={daily.progress_current} complete={daily.progress_complete} />
 			</p>
 		</div>
+	)
+}
+
+function DailyCollection({dailies}) {
+	const my_stylelol = "h-screen flex-col space-y-4 my-10 text-center mx-auto flex space-x-4";
+
+	return (
+		<div class={my_stylelol}>
+			<h3 class={"rounded px-5 py-1 mx-auto " + (dailies.meta_progress_current/dailies.meta_progress_complete >= 1 ? " bg-green-900" : " bg-blue-200")}>Daily Progress: {dailies.meta_progress_current} / {dailies.meta_progress_complete}</h3>
+			<div class="flex flex-row flex-wrap s:px-0 md:px-0 justify-evenly">
+				{dailies.objectives.map( objective => (<Daily id={objective.id} daily={objective} />))}
+			</div>
+		</div>
+
 	)
 }
 			
@@ -43,10 +58,7 @@ export default function Page() {
 	return (
 		<div>
 			<h1>Welcome to the wizard vault!!!</h1>
-			{data.meta_progress_current} / {data.meta_progress_complete}
-			<ul>
-			{data.objectives.map( objective => (<li key={objective.id}><Daily daily={objective} /></li>))}
-			</ul>
+			<DailyCollection dailies={data} />
 		</div>
 	)
 }
