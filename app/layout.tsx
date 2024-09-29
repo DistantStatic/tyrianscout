@@ -39,12 +39,10 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-	  <Context_ApiKey.Provider value={{apiKey, setApiKey}}>
+        <Context_ApiKey.Provider value={{"apiKey": apiKey, "setApiKey": setApiKey}}>
 	  	  <Context_Account.Provider value={account, setAccount}>
-	  
         {children}
-	</Context_Account.Provider>
-	
+			</Context_Account.Provider>
 		</Context_ApiKey.Provider>
       </body>
     </html>

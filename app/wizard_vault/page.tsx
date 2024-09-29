@@ -56,13 +56,13 @@ export default function Page() {
 	useEffect( () => {
 
 	console.log(document.cookie);
-	let cookieApi = document.cookie.match(/(?<=apikey\=)\S*(?=;)/);
+	let cookieApi = document.cookie.match(/(?<=apikey\=).*/)[0];
 	console.log(cookieApi);
 	setApiKey(cookieApi);
 	}, [/*document.cookie*/]);
 	
 
-	const url = base + "wizardsvault/daily"+"?access_token="+(apiKey ? apiKey : document.cookie);
+	const url = base + "wizardsvault/daily"+"?access_token="+(apiKey ? apiKey : document.cookie.match(/(?<=apikey\=).*/)[0]);
 	const { data, error, isLoading } = useSWR(url, fetcher);
 
 	if (error) return <div>failed to load</div>

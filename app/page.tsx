@@ -12,13 +12,15 @@ export default function Home() {
 	let {apiKey, setApiKey} = useContext(Context_ApiKey);
 //	const [apiKey, setApiKey] = useState("")
 
-	useEffect( () => {}, [apiKey]);
+	useEffect( () => {
+	
+	document.cookie = "apikey="+ apiKey;
+	}, [apiKey]);
 
 function handleSubmit(e) {
 	e.preventDefault();
 	let temp_api = e.target[0].value.toString();
 	setApiKey(temp_api);
-	document.cookie = "apikey="+ temp_api;
 }
 
   return (
