@@ -35,7 +35,7 @@ function handleSubmit(e) {
         <textarea
 			placeholder=" Api Key"	
 			rows={1}
-			cols={50}
+			cols={70}
 			value={apiKey}
         />
 		<br />
